@@ -14,7 +14,7 @@ public class SpawnMeatForCircles : MonoBehaviour
     {
         float CamHalfHeight = Cam.orthographicSize;
         float CamHalfWidth = Cam.aspect * CamHalfHeight;
-        for (int i = 0; i < 10; i += 1)
+        for (int i = 0; i < 20; i += 1)
         {
             x = (Random.Range(-CamHalfWidth, CamHalfWidth));
             y = (Random.Range(-CamHalfHeight, CamHalfHeight));
@@ -28,7 +28,7 @@ public class SpawnMeatForCircles : MonoBehaviour
         float CamHalfHeight = Cam.orthographicSize;
         float CamHalfWidth = Cam.aspect * CamHalfHeight;
         Timer += Time.deltaTime;
-        if (Timer >= 2.0f)
+        if (Timer >= 2.0f && GameObject != null)
         {
             x = (Random.Range(-CamHalfWidth, CamHalfWidth));
             y = (Random.Range(-CamHalfHeight, CamHalfHeight));
