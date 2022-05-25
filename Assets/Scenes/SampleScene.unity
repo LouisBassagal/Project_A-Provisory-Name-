@@ -265,6 +265,8 @@ GameObject:
   - component: {fileID: 818611561}
   - component: {fileID: 818611564}
   - component: {fileID: 818611565}
+  - component: {fileID: 818611566}
+  - component: {fileID: 818611567}
   m_Layer: 0
   m_Name: Meat
   m_TagString: Untagged
@@ -364,7 +366,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 564de3b6c3fe2d040958e03cea8ff46a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sprite: {fileID: 818611561}
+  Meat: {fileID: 818611560}
+  Rotation: 3
+--- !u!58 &818611566
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818611560}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.4
+--- !u!50 &818611567
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818611560}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1571381542
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,6 +418,8 @@ GameObject:
   - component: {fileID: 1571381546}
   - component: {fileID: 1571381543}
   - component: {fileID: 1571381547}
+  - component: {fileID: 1571381548}
+  - component: {fileID: 1571381549}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -500,3 +542,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Sprite: {fileID: 1571381544}
+--- !u!114 &1571381548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571381542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c2b59cb8b41ec8409df235515a985ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActualSprite: {fileID: 1571381544}
+--- !u!58 &1571381549
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571381542}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
