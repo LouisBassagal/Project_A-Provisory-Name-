@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class LoadGameScene : MonoBehaviour
 {
-    private void FixedUpdate() {
-        SceneManager.LoadScene("SampleScene");
+    private void OnMouseUp()
+    {
+        SceneManager.LoadScene("Game");
     }
 }
