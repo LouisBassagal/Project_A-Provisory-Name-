@@ -1,14 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ChangeColorHover : MonoBehaviour
 {
-    public TextMesh MyText;
-    private void OnMouseEnter() {
+    public TextMeshPro MyText;
+    void OnMouseEnter()
+    {
         MyText.color = Color.red;
     }
-    private void OnMouseExit() {
+    void OnMouseExit()
+    {
         MyText.color = Color.white;
+    }
+    void OnMouseDown()
+    {
+        MyText.color = Color.blue;
     }
 }
