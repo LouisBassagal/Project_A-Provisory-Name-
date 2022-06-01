@@ -12,13 +12,15 @@ public class EatMeat : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        print("Here");
         GameObject CollidedObject = collision.gameObject;
-        Vector3 ActualScaling = this.transform.localScale;
-        ActualScaling += NormalScaling;
-        this.transform.localScale = ActualScaling;
-        SpriteRenderer ObjectRenderer = CollidedObject.GetComponent<SpriteRenderer>();
-        ActualSprite.color = ObjectRenderer.color;
-        Destroy(CollidedObject);
+        if (CollidedObject.CompareTag("Meat"))
+        {
+            Vector3 ActualScaling = this.transform.localScale;
+            ActualScaling += NormalScaling;
+            this.transform.localScale = ActualScaling;
+            SpriteRenderer ObjectRenderer = CollidedObject.GetComponent<SpriteRenderer>();
+            ActualSprite.color = ObjectRenderer.color;
+            Destroy(CollidedObject);
+        }
     }
 }
