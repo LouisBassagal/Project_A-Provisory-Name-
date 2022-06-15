@@ -716,6 +716,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxMoveSpeed: 0.5
   SmoothTime: 0.3
+  ActualSprite: {fileID: 1571381544}
 --- !u!212 &1571381544
 SpriteRenderer:
   m_ObjectHideFlags: 0
